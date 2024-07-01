@@ -41,7 +41,7 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Menu Open/Close Functionality */}
-      <div className="absolute z-20 block top-6 right-3">
+      <div className="fixed z-20 block top-6 right-3">
         {!menuOpen ? (
           <HiOutlineMenu
             className="w-7 h-10 mr-2 cursor-pointer lg:hidden"
@@ -57,7 +57,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute top-0 right-0 h-screen w-1/3 bg-gray-700/50 backdrop-filter z-10 p-8 transition-all duration-300 ease-in-out lg:hidden ${
+        className={`fixed top-0 right-0 h-screen w-1/3 bg-gray-700/50 backdrop-filter z-10 p-8 transition-all duration-300 ease-in-out lg:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
