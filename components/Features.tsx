@@ -7,6 +7,7 @@ interface FeaturesProps {
   description: string;
 }
 
+// Features Data Component
 const FeaturesData = ({ icon, title, description }: FeaturesProps) => (
   <li className="flex w-full flex-1 flex-col items-start">
     <div className="rounded-full p-4 lg:p-7 bg-green-50">
@@ -38,7 +39,7 @@ const Features = () => {
         <div className="z-20 flex w-full flex-col lg:w-[60%]">
           <div className="relative">
             <Image
-              className="absolute left-[-5px] top-[-35px] lg:w-[50px]"
+              className="lg:w-[50px]"
               src="/camp.svg"
               alt="camp"
               width={50}
@@ -49,7 +50,7 @@ const Features = () => {
             </h2>
           </div>
           <div>
-            <ul className="mt-10 grid gap-10 md:grid-col-2 lg:mt-20 lg:gap-20">
+            <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:mt-20 lg:gap-20">
               {FEATURES.map((feature) => (
                 <FeaturesData
                   key={feature.title}
